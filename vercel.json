@@ -1,0 +1,30 @@
+{
+    "version": 2,
+    "builds": [
+          {
+                  "src": "api/**/*.js",
+                  "use": "@vercel/node"
+          }
+    ],
+    "routes": [
+          {
+                  "src": "/surgehq/blog",
+                  "dest": "/api/surgehq-blog"
+          }
+    ],
+    "headers": [
+          {
+                  "source": "/api/(.*)",
+                  "headers": [
+                            {
+                                        "key": "Access-Control-Allow-Origin",
+                                        "value": "*"
+                            },
+                            {
+                                        "key": "Cache-Control",
+                                        "value": "s-maxage=900, stale-while-revalidate=1800"
+                            }
+                  ]
+          }
+    ]
+}
