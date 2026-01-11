@@ -1,0 +1,15 @@
+{
+    "name": "surgehq-rss",
+    "version": "1.0.0",
+    "type": "module",
+    "scripts": {
+          "start": "node server.js",
+          "vercel-build": "echo 'Build complete'"
+    },
+    "dependencies": {
+          "cheerio": "^1.0.0-rc.12"
+    },
+    "engines": {
+          "node": "22.x"
+    }
+}
